@@ -1,12 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
+  <artifactId>front-end</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Front-End</name>
+  <description>Angular front-end side of Financial Portfolio</description>
+
+  <parent>
+    <artifactId>FinancialPortfolio</artifactId>
     <groupId>com.fp</groupId>
-    <artifactId>front-end</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
 
-    
+  <build>
+    <finalName>Front-End</finalName>
+    <plugins>
+      <plugin>
+        <groupId>com.fp</groupId>
+        <artifactId>front-end</artifactId>
+        <version>1.0-SNAPSHOT</version>
+
+        <configuration>
+          <workingDirectory>./</workingDirectory>
+        </configuration>
+
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <configuration>
+              <nodeVersion>v15.0.1</nodeVersion>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>npm install</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>install</arguments>
+              <npmVersion>7.0.7</npmVersion>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>npm run build</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run build</arguments>
+            </configuration>
+            <phase>generate-resources</phase>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version>
+        <configuration>
+          <webResources>
+            <resources>
+              <resource>
+                <directory>src/dist</directory>
+                <targetPath>static</targetPath>
+              </resource>
+            </resources>
+          </webResources>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
