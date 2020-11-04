@@ -5,9 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>front-end</artifactId>
-  <version>1.0-SNAPSHOT</version>
   <name>Front-End</name>
+  <version>1.0-SNAPSHOT</version>
   <description>Angular front-end side of Financial Portfolio</description>
+  <packaging>war</packaging>
 
   <parent>
     <artifactId>FinancialPortfolio</artifactId>
