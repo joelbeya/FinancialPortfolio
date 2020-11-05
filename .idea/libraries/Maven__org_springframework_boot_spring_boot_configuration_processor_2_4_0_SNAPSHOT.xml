@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.boot:spring-boot-configuration-processor:2.4.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.4.0-SNAPSHOT/spring-boot-configuration-processor-2.4.0-20201103.204301-685.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.4.0-SNAPSHOT/spring-boot-configuration-processor-2.4.0-20201105.165557-695.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.4.0-SNAPSHOT/spring-boot-configuration-processor-2.4.0-20201103.204301-685-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.4.0-SNAPSHOT/spring-boot-configuration-processor-2.4.0-20201105.165557-695-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.4.0-SNAPSHOT/spring-boot-configuration-processor-2.4.0-20201103.204301-685-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.4.0-SNAPSHOT/spring-boot-configuration-processor-2.4.0-20201105.165557-695-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
