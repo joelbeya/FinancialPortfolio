@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>FinancialPortfolio</artifactId>
+		<artifactId>financialportfolio</artifactId>
 		<groupId>com.fp</groupId>
-		<version/>
+		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -69,7 +69,7 @@
 		<dependency>
 			<groupId>com.github.eirslett</groupId>
 			<artifactId>frontend-maven-plugin</artifactId>
-			<version>${frontend-maven-plugin.version}</version>
+			<version>1.7.6</version>
 			<scope>runtime</scope>
 			<type>war</type>
 		</dependency>
