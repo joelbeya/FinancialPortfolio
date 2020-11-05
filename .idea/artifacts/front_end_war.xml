@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="Front-End.war">
+    <root id="archive" name="front-end-0.0.1-SNAPSHOT.war">
       <element id="artifact" artifact-name="front-end:war exploded" />
     </root>
   </artifact>
