@@ -8,13 +8,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Front-End</name>
   <description>Angular front-end side of Financial Portfolio</description>
-  <packaging>war</packaging>
 
   <parent>
     <artifactId>financialportfolio</artifactId>
     <groupId>com.fp</groupId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
   <build>
@@ -58,6 +56,7 @@
           </execution>
         </executions>
       </plugin>
+
     </plugins>
   </build>
 

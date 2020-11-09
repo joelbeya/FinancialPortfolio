@@ -6,21 +6,20 @@
         <artifactId>financialportfolio</artifactId>
         <groupId>com.fp</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
+
 
     <artifactId>back-end</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Back-End</name>
     <description>Back-end module of the Financial Portfolio</description>
     <packaging>war</packaging>
-
-    <properties>
-        <java.version>14</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -71,7 +70,6 @@
             <artifactId>front-end</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>runtime</scope>
-            <type>war</type>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -96,13 +94,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
