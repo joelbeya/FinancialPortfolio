@@ -16,3 +16,5 @@ INSERT INTO market(name, change, sell, buy)
 VALUES('Microsoft', 21.25, 223.67, 224.09);
 INSERT INTO market(name, change, sell, buy)
 VALUES('Bitcoin', 1687.40, 15541.96, 15655.60);
+INSERT INTO market(name, change, sell, buy)
+VALUES('Ripple', 0.01717, 1.18195, 1.18210);
