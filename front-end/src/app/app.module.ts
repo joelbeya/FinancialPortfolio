@@ -12,6 +12,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatIconModule,
     MatInputModule,
     MatListModule,
+    MatTableModule,
+    MatSortModule,
     MatToolbarModule,
   ],
   providers: [],
