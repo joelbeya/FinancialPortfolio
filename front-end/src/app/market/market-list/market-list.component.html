@@ -1,0 +1,43 @@
+<table [dataSource]="markets" class="mat-elevation-z18" mat-table>
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th *matHeaderCellDef mat-header-cell> No.</th>
+    <td *matCellDef="let element" mat-cell> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th *matHeaderCellDef mat-header-cell> Name</th>
+    <td *matCellDef="let element" mat-cell>
+      <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5%">
+        <img alt="{{element.name}}" class="customImg" src="{{element.giphyUrl}}">
+        <span fxFlex>{{element.name}}</span>
+      </div>
+    </td>
+  </ng-container>
+
+  <!-- Change Column -->
+  <ng-container matColumnDef="change">
+    <th *matHeaderCellDef mat-header-cell> Change</th>
+    <td *matCellDef="let element" mat-cell> {{element.change}} </td>
+  </ng-container>
+
+  <!-- Sell Column -->
+  <ng-container matColumnDef="sell">
+    <th *matHeaderCellDef mat-header-cell> Sell</th>
+    <td *matCellDef="let element" mat-cell> {{element.sell}} </td>
+  </ng-container>
+
+  <!-- Buy Column -->
+  <ng-container matColumnDef="buy">
+    <th *matHeaderCellDef mat-header-cell> Buy</th>
+    <td *matCellDef="let element" mat-cell> {{element.buy}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+</table>
