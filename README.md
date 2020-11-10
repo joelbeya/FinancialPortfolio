@@ -1,2 +1,3 @@
 # FinancialPortfolio
-Financial Portfolio web application 
+
+## Financial portfolio web application built with Spring Boot, Angular, and Postgresql
