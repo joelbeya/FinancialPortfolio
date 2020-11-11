@@ -263,7 +263,7 @@ class MarketListComponent {
     ngOnInit() {
         this.marketService.getAllMarket().subscribe(data => {
             this.markets = data;
-            console.log(this.markets[0].name);
+            console.log(this.markets);
             for (const market of this.markets) {
                 this.giphyService.get(market.name).subscribe(url => market.giphyUrl = url);
             }

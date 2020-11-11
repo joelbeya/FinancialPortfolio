@@ -14,19 +14,26 @@ public class Market {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private @NonNull Long id;
+    private @NonNull long id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "change")
-    private Long change;
+    @Column(name = "change", precision = 10, scale = 5)
+    private double change;
 
-    @Column(name = "sell")
-    private Long sell;
+    @Column(name = "sell", precision = 10, scale = 5)
+    private double sell;
 
-    @Column(name = "buy")
-    private Long buy;
+    @Column(name = "buy", precision = 10, scale = 5)
+    private double buy;
+
+    public Market(String name, double change, double sell, double buy) {
+        this.name = name;
+        this.change = change;
+        this.sell = sell;
+        this.buy = buy;
+    }
 
     public String getName() {
         return name;
@@ -36,27 +43,27 @@ public class Market {
         this.name = name;
     }
 
-    public Long getChange() {
+    public double getChange() {
         return change;
     }
 
-    public void setChange(Long change) {
+    public void setChange(double change) {
         this.change = change;
     }
 
-    public Long getSell() {
+    public double getSell() {
         return sell;
     }
 
-    public void setSell(Long sell) {
+    public void setSell(double sell) {
         this.sell = sell;
     }
 
-    public Long getBuy() {
+    public double getBuy() {
         return buy;
     }
 
-    public void setBuy(Long buy) {
+    public void setBuy(double buy) {
         this.buy = buy;
     }
 

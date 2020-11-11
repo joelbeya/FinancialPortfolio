@@ -7,9 +7,39 @@ import {Observable} from 'rxjs';
 })
 export class MarketService {
 
-  constructor(private httpClient: HttpClient) { }
+  private baseUrl = 'http://localhost:8080/api/';
+
+  constructor(private httpClient: HttpClient) {
+  }
+
+  getMarketList(): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/markets/name/{name}`);
+  }
 
   getAllMarket(): Observable<any> {
-    return this.httpClient.get('//localhost:8080/api/markets');
+    return this.httpClient.get(`${this.baseUrl}/markets`);
+  }
+
+  createMarket(market: object): Observable<object> {
+    return this.httpClient.post(`${this.baseUrl}/market/create`, market);
+  }
+
+  updateMarket(id: number, market: object)
+    : Observable<object> {
+    return this.httpClient.put(`${this.baseUrl}/market/{id}`, market);
+  }
+
+  deleteMarket(id: number): Observable<any> {
+    return this.httpClient.delete(
+      `${this.baseUrl}/market/delete/{id}`,
+      {responseType: 'text'}
+    );
+  }
+
+  deleteAllMarket(): Observable<any> {
+    return this.httpClient.delete(
+      `${this.baseUrl}/markets/delete/all`,
+      {responseType: 'text'}
+    );
   }
 }

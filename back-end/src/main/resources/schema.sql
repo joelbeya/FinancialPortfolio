@@ -3,7 +3,7 @@ CREATE TABLE market
 (
     id     serial PRIMARY KEY,
     name   VARCHAR(255),
-    change NUMERIC(10, 5),
-    sell   NUMERIC(10, 5),
-    buy    NUMERIC(10, 5)
+    change DOUBLE PRECISION,
+    sell   DOUBLE PRECISION,
+    buy    DOUBLE PRECISION
 );
