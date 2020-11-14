@@ -51,7 +51,12 @@
     <tr *matNoDataRow class="mat-row">
       <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
     </tr>
+
   </table>
-<!--  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>-->
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    class="customPagination mat-elevation-z18"></mat-paginator>
+
 </mat-card>
 
