@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {MarketService} from '../../shared/market.service';
 import {GiphyService} from '../../shared/giphy.service';
+import {MatTableDataSource} from '@angular/material/table';
+
 
 @Component({
   selector: 'app-market-list',
@@ -9,7 +11,7 @@ import {GiphyService} from '../../shared/giphy.service';
 })
 export class MarketListComponent implements OnInit {
 
-  markets: Array<any>;
+  markets: any;
   displayedColumns: string[] = ['id', 'name', 'change', 'sell', 'buy'];
 
   constructor(
@@ -19,12 +21,16 @@ export class MarketListComponent implements OnInit {
 
   ngOnInit(): void {
     this.marketService.getAllMarket().subscribe(data => {
-      this.markets = data;
-      console.log(this.markets);
-      for (const market of this.markets) {
+      this.markets = new MatTableDataSource(data);
+      for (const market of this.markets.data) {
         this.giphyService.get(market.name).subscribe(url => market.giphyUrl = url);
       }
     });
+    console.log(typeof this.markets);
   }
 
+  applyFilter(event: Event): any {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.markets.filter = filterValue.trim().toLowerCase();
+  }
 }

@@ -12,9 +12,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="14">
-      <module name="back-end" target="1.8" />
-      <module name="FinancialPortfolio" target="1.8" />
-      <module name="front-end" target="1.8" />
+      <module name="back-end" target="14" />
+      <module name="FinancialPortfolio" target="14" />
+      <module name="front-end" target="14" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

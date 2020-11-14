@@ -1,43 +1,57 @@
-<table [dataSource]="markets" class="mat-elevation-z18" mat-table>
+<mat-card class="mat-elevation-z18">
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input #input (keyup)="applyFilter($event)" matInput placeholder="Ex. ium">
+  </mat-form-field>
 
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
+  <table [dataSource]="markets" class="mat-elevation-z18" mat-table>
 
-  <!-- Position Column -->
-  <ng-container matColumnDef="id">
-    <th *matHeaderCellDef mat-header-cell> No.</th>
-    <td *matCellDef="let element" mat-cell> {{element.id}} </td>
-  </ng-container>
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th *matHeaderCellDef mat-header-cell> Name</th>
-    <td *matCellDef="let element" mat-cell>
-      <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5%">
-        <img alt="{{element.name}}" class="customImg" src="{{element.giphyUrl}}">
-        <span fxFlex>{{element.name}}</span>
-      </div>
-    </td>
-  </ng-container>
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th *matHeaderCellDef mat-header-cell> No.</th>
+      <td *matCellDef="let element" mat-cell> {{element.id}} </td>
+    </ng-container>
 
-  <!-- Change Column -->
-  <ng-container matColumnDef="change">
-    <th *matHeaderCellDef mat-header-cell> Change</th>
-    <td *matCellDef="let element" mat-cell> {{element.change}} </td>
-  </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th *matHeaderCellDef mat-header-cell> Name</th>
+      <td *matCellDef="let element" mat-cell>
+        <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5%">
+          <img alt="{{element.name}}" class="customImg" src="{{element.giphyUrl}}">
+          <span fxFlex>{{element.name}}</span>
+        </div>
+      </td>
+    </ng-container>
 
-  <!-- Sell Column -->
-  <ng-container matColumnDef="sell">
-    <th *matHeaderCellDef mat-header-cell> Sell</th>
-    <td *matCellDef="let element" mat-cell> {{element.sell}} </td>
-  </ng-container>
+    <!-- Change Column -->
+    <ng-container matColumnDef="change">
+      <th *matHeaderCellDef mat-header-cell> Change</th>
+      <td *matCellDef="let element" mat-cell> {{element.change}} </td>
+    </ng-container>
 
-  <!-- Buy Column -->
-  <ng-container matColumnDef="buy">
-    <th *matHeaderCellDef mat-header-cell> Buy</th>
-    <td *matCellDef="let element" mat-cell> {{element.buy}} </td>
-  </ng-container>
+    <!-- Sell Column -->
+    <ng-container matColumnDef="sell">
+      <th *matHeaderCellDef mat-header-cell> Sell</th>
+      <td *matCellDef="let element" mat-cell> {{element.sell}} </td>
+    </ng-container>
 
-  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
-  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
-</table>
+    <!-- Buy Column -->
+    <ng-container matColumnDef="buy">
+      <th *matHeaderCellDef mat-header-cell> Buy</th>
+      <td *matCellDef="let element" mat-cell> {{element.buy}} </td>
+    </ng-container>
+
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr *matNoDataRow class="mat-row">
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+<!--  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>-->
+</mat-card>
+

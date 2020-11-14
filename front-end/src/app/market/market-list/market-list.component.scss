@@ -1,18 +1,19 @@
-table {
+mat-card {
   min-width: 80%;
+  margin-top: 24px;
   margin-left: 10%;
   margin-right: 10%;
   font-weight: 900;
+}
+
+table {
+  width: 100%;
 }
 
 .mat-form-field {
   font-size: 14px;
   width: 100%;
 }
-
-//td, th {
-//  width: 25%;
-//}
 
 .customImg {
   border-radius: 50%;
