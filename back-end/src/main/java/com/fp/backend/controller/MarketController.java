@@ -78,7 +78,7 @@ public class MarketController {
             logger.info("Delete market with ID {}", id);
             return new ResponseEntity<>("Market has been deleted!", HttpStatus.OK);
         } else {
-            logger.warn("Market with id {} not found or does not exist or operation not allowed", id);
+            logger.error("Market with id {} not found or does not exist or operation not allowed", id);
             return new ResponseEntity<>("Market has not been deleted", HttpStatus.METHOD_NOT_ALLOWED);
         }
     }
