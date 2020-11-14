@@ -1,10 +1,10 @@
 <mat-card class="mat-elevation-z18">
   <mat-form-field>
     <mat-label>Filter</mat-label>
-    <input #input (keyup)="applyFilter($event)" matInput placeholder="Ex. ium">
+    <input #input (keyup)="applyFilter($event)" matInput placeholder="Ex. Nio">
   </mat-form-field>
 
-  <table [dataSource]="markets" class="mat-elevation-z18" mat-table>
+  <table [dataSource]="markets" class="mat-elevation-z18" mat-table matSort>
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -17,7 +17,7 @@
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <th *matHeaderCellDef mat-header-cell> Name</th>
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> Name</th>
       <td *matCellDef="let element" mat-cell>
         <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5%">
           <img alt="{{element.name}}" class="customImg" src="{{element.giphyUrl}}">
@@ -28,19 +28,19 @@
 
     <!-- Change Column -->
     <ng-container matColumnDef="change">
-      <th *matHeaderCellDef mat-header-cell> Change</th>
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> Change</th>
       <td *matCellDef="let element" mat-cell> {{element.change}} </td>
     </ng-container>
 
     <!-- Sell Column -->
     <ng-container matColumnDef="sell">
-      <th *matHeaderCellDef mat-header-cell> Sell</th>
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> Sell</th>
       <td *matCellDef="let element" mat-cell> {{element.sell}} </td>
     </ng-container>
 
     <!-- Buy Column -->
     <ng-container matColumnDef="buy">
-      <th *matHeaderCellDef mat-header-cell> Buy</th>
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> Buy</th>
       <td *matCellDef="let element" mat-cell> {{element.buy}} </td>
     </ng-container>
 

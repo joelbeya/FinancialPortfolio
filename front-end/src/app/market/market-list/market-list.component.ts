@@ -29,8 +29,8 @@ export class MarketListComponent implements OnInit  {
       for (const market of this.markets.data) {
         this.giphyService.get(market.name).subscribe(url => market.giphyUrl = url);
       }
-      this.markets.sort = this.sort;
       this.markets.paginator = this.paginator;
+      this.markets.sort = this.sort;
     });
   }
 
