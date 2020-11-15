@@ -80,9 +80,14 @@
 
   <mat-toolbar class="customToolbar mat-elevation-z18">
     <mat-toolbar-row class="customRow">
-      <button class="example-icon" mat-button>
-        <mat-icon>add_business</mat-icon>
-        <span>Add Market</span>
+      <button #tooltip="matTooltip" class="example-icon" mat-button matTooltip="Add another  market"
+              matTooltipPosition="above">
+        <mat-icon>add</mat-icon>
+      </button>
+      <span class="example-spacer"></span>
+      <button #tooltip="matTooltip" (click)="deleteAllMarket()" class="example-icon" mat-button matTooltip="Remove all market"
+              matTooltipPosition="above">
+        <mat-icon>remove</mat-icon>
       </button>
       <span class="example-spacer"></span>
       <mat-paginator

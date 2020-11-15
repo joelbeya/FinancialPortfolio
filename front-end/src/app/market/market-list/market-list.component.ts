@@ -5,7 +5,6 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-market-list',
@@ -31,7 +30,6 @@ export class MarketListComponent implements OnInit  {
   constructor(
     private marketService: MarketService,
     private giphyService: GiphyService,
-    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -50,17 +48,24 @@ export class MarketListComponent implements OnInit  {
     this.markets.filter = filterValue.trim().toLowerCase();
   }
 
-  deleteMarket(id: any): void {
+  deleteMarket(id: number): any {
+    console.log(id);
     this.marketService.deleteMarket(id).subscribe(
       data => {
         console.log('Data :' + data + 'deleted');
-        this.reloadData();
+        this.ngOnInit();
       },
       error => console.log('Deletion failed' + error)
     );
   }
 
-  private reloadData(): void {
-    this.router.navigate(['']).then(r => console.log('Action performed properly'));
+  deleteAllMarket(): any {
+    this.marketService.deleteAllMarket().subscribe(
+      data => {
+        console.log('All data deleted' + data);
+        this.ngOnInit();
+      },
+      error => console.log('Deletion not working' + error)
+    );
   }
 }

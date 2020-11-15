@@ -13,7 +13,7 @@ export class MarketService {
   }
 
   getMarketList(): Observable<any> {
-    return this.httpClient.get(`${this.baseUrl}/markets/name/{name}`);
+    return this.httpClient.get(`${this.baseUrl}/markets/name/${name}`);
   }
 
   getAllMarket(): Observable<any> {
@@ -26,12 +26,12 @@ export class MarketService {
 
   updateMarket(id: number, market: object)
     : Observable<object> {
-    return this.httpClient.put(`${this.baseUrl}/market/{id}`, market);
+    return this.httpClient.put(`${this.baseUrl}/market/${id}`, market);
   }
 
   deleteMarket(id: number): Observable<any> {
     return this.httpClient.delete(
-      `${this.baseUrl}/market/delete/{id}`,
+      `${this.baseUrl}/market/delete/${id}`,
       {responseType: 'text'}
     );
   }

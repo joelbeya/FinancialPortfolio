@@ -93,7 +93,7 @@ public class MarketController {
             marketRepository.deleteAll();
             return new ResponseEntity<>("All Markets have been deleted!", HttpStatus.OK);
         } else {
-            logger.warn("Delete all markets do not work");
+            logger.warn("Markets list already empty");
             return new ResponseEntity<>("Operation failed", HttpStatus.METHOD_NOT_ALLOWED);
         }
     }

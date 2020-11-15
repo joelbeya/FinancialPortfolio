@@ -18,6 +18,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MarketEditComponent} from './market/market-edit/market-edit.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -26,22 +27,23 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MarketEditComponent,
     PageNotFoundComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        MatButtonModule,
-        MatCardModule,
-        MatIconModule,
-        MatInputModule,
-        MatListModule,
-        MatTableModule,
-        MatSortModule,
-        MatToolbarModule,
-        FlexLayoutModule,
-        MatPaginatorModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatTableModule,
+    MatSortModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatPaginatorModule,
+    MatTooltipModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
