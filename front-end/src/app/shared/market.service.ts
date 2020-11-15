@@ -12,7 +12,7 @@ export class MarketService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getMarketList(): Observable<any> {
+  getMarketList(name: string): Observable<any> {
     return this.httpClient.get(`${this.baseUrl}/markets/name/${name}`);
   }
 

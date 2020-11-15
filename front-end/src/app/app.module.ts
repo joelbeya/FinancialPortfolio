@@ -19,6 +19,7 @@ import {MarketEditComponent} from './market/market-edit/market-edit.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     FlexLayoutModule,
     MatPaginatorModule,
     MatTooltipModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

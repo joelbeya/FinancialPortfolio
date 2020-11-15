@@ -51,7 +51,7 @@
              class="example-element-detail">
           <div class="example-element-description" fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="2%">
             <span class="example-element-description-attribution"> -- Possible actions to perform on data -- </span>
-            <button (click)='deleteMarket(element.id)' class="mat-elevation-z6" color="primary" mat-raised-button>
+            <button [routerLink]="['market/edit', element.name]" class="mat-elevation-z6" color="primary" mat-raised-button>
               Edit
             </button>
             <button (click)='deleteMarket(element.id)' class="mat-elevation-z6" color="accent" mat-raised-button>
@@ -80,7 +80,7 @@
 
   <mat-toolbar class="customToolbar mat-elevation-z18">
     <mat-toolbar-row class="customRow">
-      <button #tooltip="matTooltip" class="example-icon" mat-button matTooltip="Add another  market"
+      <button #tooltip="matTooltip" [routerLink]="['market/add']" class="example-icon" mat-button matTooltip="Add another market"
               matTooltipPosition="above">
         <mat-icon>add</mat-icon>
       </button>

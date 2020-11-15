@@ -10,7 +10,8 @@ const routes: Routes = [
     path: 'market', children: [
       {path: '', redirectTo: 'list', pathMatch: 'full'},
       {path: 'list', component: MarketListComponent},
-      {path: 'edit', component: MarketEditComponent},
+      {path: 'add', component: MarketEditComponent},
+      {path: 'edit/:id', component: MarketEditComponent},
     ]
   },
   {path: 'page-not-found', component: PageNotFoundComponent},

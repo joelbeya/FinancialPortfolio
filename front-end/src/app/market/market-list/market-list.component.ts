@@ -5,6 +5,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-market-list',
@@ -30,6 +31,7 @@ export class MarketListComponent implements OnInit  {
   constructor(
     private marketService: MarketService,
     private giphyService: GiphyService,
+    public router: Router,
   ) { }
 
   ngOnInit(): void {

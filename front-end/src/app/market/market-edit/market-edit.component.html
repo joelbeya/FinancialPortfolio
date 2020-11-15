@@ -1,1 +1,37 @@
-<p>market-edit works!</p>
+<mat-card class="mat-elevation-z18 globalMarketForm">
+  <form #carForm="ngForm" (ngSubmit)="save(carForm.value)" class="example-form">
+    <mat-card-header>
+      <mat-card-title><h2>{{market.name ? 'Edit' : 'Add' }} Market</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <input [(ngModel)]="market.href" name="href" type="hidden">
+      <mat-form-field class="example-full-width">
+        <input #name [(ngModel)]="market.name" matInput
+               name="name" placeholder="Market Name" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input #change [(ngModel)]="market.change" matInput
+               name="change" placeholder="Market Change" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input #sell [(ngModel)]="market.sell" matInput
+               name="sell" placeholder="Market Sell" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input #buy [(ngModel)]="market.buy" matInput
+               name="buy" placeholder="Market Buy" required>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]="!carForm.valid" color="primary" mat-raised-button
+              type="submit">Save
+      </button>
+      <a mat-button routerLink="">Cancel</a>
+    </mat-card-actions>
+    <mat-card-footer>
+      <div class="shapeImg">
+        <img alt="{{market.name}}" class="giphy" src="{{market.giphyUrl}}">
+      </div>
+    </mat-card-footer>
+  </form>
+</mat-card>

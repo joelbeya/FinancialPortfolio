@@ -43,10 +43,11 @@ public class MarketController {
                 new Market(
                         market.getName(),
                         market.getChange(),
-                        market.getBuy(),
-                        market.getSell())
+                        market.getSell(),
+                        market.getBuy()
+                )
         );
-        logger.info("Market with name {} added properly", market.getName());
+        logger.info("Market with name {} added properly", _market.getName());
         return _market;
     }
 
