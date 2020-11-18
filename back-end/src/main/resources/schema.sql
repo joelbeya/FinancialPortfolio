@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS market;
 CREATE TABLE market
 (
-    id     serial PRIMARY KEY,
+    id     SERIAL NOT NULL PRIMARY KEY,
     name   VARCHAR(255),
     change DOUBLE PRECISION,
     sell   DOUBLE PRECISION,

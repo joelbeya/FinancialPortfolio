@@ -1,20 +1,17 @@
 package com.fp.backend.model;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 import javax.persistence.*;
 
 @Entity
 @Data
-@NoArgsConstructor
 @Table(name = "market")
 public class Market {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private @NonNull long id;
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private long id;
 
     @Column(name = "name")
     private String name;
@@ -33,6 +30,10 @@ public class Market {
         this.change = change;
         this.sell = sell;
         this.buy = buy;
+    }
+
+    public Market() {
+
     }
 
     public String getName() {

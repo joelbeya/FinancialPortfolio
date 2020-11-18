@@ -4,7 +4,6 @@ import com.fp.backend.model.Market;
 import com.fp.backend.repository.MarketRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,27 +18,29 @@ public class MarketController {
 
     static Logger logger = LoggerFactory.getLogger(MarketController.class);
 
-    @Autowired
-    private MarketRepository marketRepository;
+    private final MarketRepository marketRepository;
+
+    public MarketController(MarketRepository marketRepository) {
+        this.marketRepository = marketRepository;
+    }
 
     @GetMapping(value = "markets/name/{name}")
     public List<Market> findByNameContainingIgnoreCase(@PathVariable String name) {
         List<Market> markets = marketRepository.findByNameContainingIgnoreCase(name);
-        logger.info("Market found {}", markets);
+        logger.info("Market found {}", markets.toString());
         return markets;
     }
 
     @GetMapping("markets")
     public List<Market> getAllMarkets() {
-        for (Market market : marketRepository.findAll()) {
-            logger.info("Get all markets : {} ", market);
-        }
-        return (List<Market>) marketRepository.findAll();
+        List<Market> markets = (List<Market>) marketRepository.findAll();
+        logger.info("Get all markets : {} ", markets.toString());
+        return markets;
     }
 
     @PostMapping(value = "market/create")
     public Market postMarket(@RequestBody Market market) {
-        Market _market = marketRepository.save(
+        var _market = marketRepository.save(
                 new Market(
                         market.getName(),
                         market.getChange(),
