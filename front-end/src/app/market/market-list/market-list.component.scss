@@ -1,6 +1,6 @@
 mat-card {
   min-width: 80%;
-  margin: 2% 8% 1%;
+  margin: 1% 5% 1%;
   font-weight: 900;
 }
 
@@ -9,7 +9,7 @@ table {
 }
 
 .mat-form-field {
-  font-size: 24px;
+  font-size: 14px;
   width: 100%;
 }
 
@@ -19,53 +19,17 @@ table {
   height: 44px;
 }
 
-th.mat-sort-header-sorted {
-  color: black;
-}
-
-tr.example-detail-row {
-  height: 0;
-}
-
-tr.example-element-row:not(.example-expanded-row):hover {
-  background: whitesmoke;
-}
-
-tr.example-element-row:not(.example-expanded-row):active {
-  background: #efefef;
-}
-
-.example-element-row td {
-  border-bottom-width: 0;
-}
-
-.example-element-detail {
-  overflow: hidden;
-  //display: flex;
-}
-
-.example-element-description {
-  padding: 16px;
-}
-
-.example-element-description-attribution {
-  opacity: 0.5;
-}
-
 .customButton {
   width: 30%;
 }
-
 
 .example-spacer {
   flex: 1 1 auto;
 }
 
 .example-icon {
-  width: 5%;
-  height: 100%;
+  height: 100% !important;
 }
-
 
 .customPagination {
   width: 90%;
@@ -80,4 +44,17 @@ tr.example-element-row:not(.example-expanded-row):active {
   margin: 1% auto;
   border-color: white;
   background-color: white;
+}
+
+th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type {
+  padding: unset !important;
+  height: 50%;
+}
+
+tr.mat-row, tr.mat-footer-row {
+  height: 58px !important;
+}
+
+.example-icon-bis {
+  height: 58px !important;
 }

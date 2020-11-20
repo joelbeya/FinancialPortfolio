@@ -22,7 +22,7 @@ import {Router} from '@angular/router';
 export class MarketListComponent implements OnInit  {
 
   markets: MatTableDataSource<any>;
-  displayedColumns: string[] = ['id', 'name', 'change', 'sell', 'buy'];
+  displayedColumns: string[] = ['id', 'name', 'change', 'sell', 'buy', 'actions'];
   expandedElement: any | null;
 
   @ViewChild(MatSort) sort: MatSort;
