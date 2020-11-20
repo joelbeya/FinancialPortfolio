@@ -2,6 +2,7 @@ package com.fp.backend.controller;
 
 import com.fp.backend.model.Market;
 import com.fp.backend.repository.MarketRepository;
+import lombok.val;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -26,7 +27,7 @@ public class MarketController {
 
     @GetMapping(value = "markets/name/{name}")
     public List<Market> findByNameContainingIgnoreCase(@PathVariable String name) {
-        List<Market> markets = marketRepository.findByNameContainingIgnoreCase(name);
+        val markets = marketRepository.findByNameContainingIgnoreCase(name);
         logger.info("Market found {}", markets);
         return markets;
     }
