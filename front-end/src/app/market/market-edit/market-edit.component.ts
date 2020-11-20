@@ -33,7 +33,7 @@ export class MarketEditComponent implements OnInit, OnDestroy {
             this.giphyService.get(market[0].name).subscribe(url => market[0].giphyUrl = url);
           } else {
             this.router.navigate(['']).then(r =>
-              console.log(`Market with name '${name}' not found, returning to list` + r));
+              console.log(`Market with name '${name}' not found, got back to list =>` + r));
           }
         });
       }
@@ -47,12 +47,12 @@ export class MarketEditComponent implements OnInit, OnDestroy {
   save(form: NgForm): any {
     if (this.market.id) {
       this.marketService.updateMarket(this.market.id, form).subscribe(
-        () => this.router.navigate(['']).then(r => console.log('Updating Market ' + r)),
+        () => this.router.navigate(['']).then(r => console.log('Market updated => ' + r)),
         error => console.log('Update does not work properly' + error)
       );
     } else {
       this.marketService.createMarket(form).subscribe(
-        () => this.router.navigate(['']).then(r => console.log('Create Market' + r)),
+        () => this.router.navigate(['']).then(r => console.log('Market created => ' + r)),
         error => console.log('Create does not work properly' + error)
       );
     }

@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Market {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
@@ -25,57 +25,4 @@ public class Market {
     @Column(name = "buy", precision = 10, scale = 5)
     private double buy;
 
-    public Market(String name, double change, double sell, double buy) {
-        this.name = name;
-        this.change = change;
-        this.sell = sell;
-        this.buy = buy;
-    }
-
-    public Market() {
-
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getChange() {
-        return change;
-    }
-
-    public void setChange(double change) {
-        this.change = change;
-    }
-
-    public double getSell() {
-        return sell;
-    }
-
-    public void setSell(double sell) {
-        this.sell = sell;
-    }
-
-    public double getBuy() {
-        return buy;
-    }
-
-    public void setBuy(double buy) {
-        this.buy = buy;
-    }
-
-    @Override
-    public String toString() {
-        return "Market{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", change=" + change +
-                ", sell=" + sell +
-                ", buy=" + buy +
-                '}';
-    }
 }

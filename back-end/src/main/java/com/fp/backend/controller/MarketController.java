@@ -27,7 +27,7 @@ public class MarketController {
     @GetMapping(value = "markets/name/{name}")
     public List<Market> findByNameContainingIgnoreCase(@PathVariable String name) {
         List<Market> markets = marketRepository.findByNameContainingIgnoreCase(name);
-        logger.info("Market found {}", markets.toString());
+        logger.info("Market found {}", markets);
         return markets;
     }
 
@@ -40,14 +40,7 @@ public class MarketController {
 
     @PostMapping(value = "market/create")
     public Market postMarket(@RequestBody Market market) {
-        var _market = marketRepository.save(
-                new Market(
-                        market.getName(),
-                        market.getChange(),
-                        market.getSell(),
-                        market.getBuy()
-                )
-        );
+        Market _market = marketRepository.save(market);
         logger.info("Market with name {} added properly", _market.getName());
         return _market;
     }
@@ -70,10 +63,7 @@ public class MarketController {
         } else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @RequestMapping(
-            value = "market/delete/{id}",
-            method = {RequestMethod.DELETE, RequestMethod.GET}
-    )
+    @DeleteMapping(value = "market/delete/{id}")
     public ResponseEntity<String> deleteMarket(@PathVariable("id") long id) {
         if (marketRepository.existsById(id)) {
             marketRepository.deleteById(id);
@@ -85,10 +75,7 @@ public class MarketController {
         }
     }
 
-    @RequestMapping(
-            value = "markets/delete/all",
-            method = {RequestMethod.DELETE, RequestMethod.GET}
-    )
+    @DeleteMapping(value = "markets/delete/all")
     public ResponseEntity<String> deleteAllMarket() {
         if (!getAllMarkets().isEmpty()) {
             logger.info("Delete all markets");
