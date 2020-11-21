@@ -42,7 +42,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.1" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.30" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aspects:5.3.1" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-rest/2.4.0-SNAPSHOT/spring-boot-starter-data-rest-2.4.0-20201112.134328-721.jar" output-file-name="spring-boot-starter-data-rest-2.4.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-rest-webmvc:3.4.1" />
@@ -89,6 +88,10 @@
           <element id="archive" name="front-end-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="front-end" />
           </element>
+          <element id="library" level="project" name="Maven: org.liquibase:liquibase-core:3.10.3" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.1" />
+          <element id="library" level="project" name="Maven: javax.activation:javax.activation-api:1.2.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.30" />
         </element>
       </element>
       <element id="directory" name="META-INF">
