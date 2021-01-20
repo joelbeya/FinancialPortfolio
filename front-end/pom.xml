@@ -22,6 +22,7 @@
         <targetPath>static</targetPath>
       </resource>
     </resources>
+
     <plugins>
       <plugin>
         <groupId>com.github.eirslett</groupId>
@@ -30,33 +31,59 @@
         <configuration>
           <workingDirectory>./</workingDirectory>
           <nodeVersion>v15.0.1</nodeVersion>
-          <npmVersion>7.0.13</npmVersion>
+          <npmVersion>7.0.14</npmVersion>
         </configuration>
         <executions>
+
           <execution>
             <id>install node and npm</id>
             <goals>
               <goal>install-node-and-npm</goal>
             </goals>
           </execution>
+
           <execution>
             <id>npm install</id>
             <goals>
               <goal>npm</goal>
             </goals>
+            <configuration>
+              <arguments>install</arguments>
+            </configuration>
           </execution>
+
           <execution>
-            <id>npm run build</id>
+            <id>npm fund</id>
             <goals>
               <goal>npm</goal>
             </goals>
             <configuration>
-              <arguments>run build</arguments>
+              <arguments>fund</arguments>
             </configuration>
           </execution>
+
+          <execution>
+            <id>npm ci</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>ci</arguments>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>npm build</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>build</arguments>
+            </configuration>
+          </execution>
+
         </executions>
       </plugin>
-
     </plugins>
   </build>
 

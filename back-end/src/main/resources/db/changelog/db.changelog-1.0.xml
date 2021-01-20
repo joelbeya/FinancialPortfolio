@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
-    <changeSet author="bj (generated)" id="1605930634696-1">
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="bj (generated)" id="1606089155517-1">
         <createSequence sequenceName="hibernate_sequence"/>
     </changeSet>
-    <changeSet author="bj (generated)" id="1605930634696-2">
+    <changeSet author="bj (generated)" id="1606089155517-2">
         <createSequence sequenceName="market_id_seq"/>
     </changeSet>
-    <changeSet author="bj (generated)" id="1605930634696-3">
+    <changeSet author="bj (generated)" id="1606089155517-3">
         <createTable tableName="hibernate_sequences">
             <column name="sequence_name" type="VARCHAR(255)">
                 <constraints nullable="false"/>
@@ -16,7 +14,7 @@
             <column name="next_val" type="BIGINT"/>
         </createTable>
     </changeSet>
-    <changeSet author="bj (generated)" id="1605930634696-4">
+    <changeSet author="bj (generated)" id="1606089155517-4">
         <createTable tableName="market">
             <column autoIncrement="true" name="id" type="SERIAL">
                 <constraints primaryKey="true" primaryKeyName="market_pkey"/>
@@ -27,7 +25,7 @@
             <column name="buy" type="FLOAT8"/>
         </createTable>
     </changeSet>
-    <changeSet author="bj (generated)" id="1605930634696-5">
+    <changeSet author="bj (generated)" id="1606089155517-5">
         <addPrimaryKey columnNames="sequence_name" constraintName="hibernate_sequences_pkey" tableName="hibernate_sequences"/>
     </changeSet>
 </databaseChangeLog>

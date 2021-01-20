@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="bj (generated)" id="1606089187666-1">
+        <insert tableName="hibernate_sequences">
+            <column name="sequence_name" value="default"/>
+            <column name="next_val" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="bj (generated)" id="1606089187666-2">
+        <insert tableName="market">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Tesla Motors Inc."/>
+            <column name="change" valueNumeric="41.91"/>
+            <column name="sell" valueNumeric="429.49"/>
+            <column name="buy" valueNumeric="430.34"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Apple"/>
+            <column name="change" valueNumeric="9.83"/>
+            <column name="sell" valueNumeric="118.73"/>
+            <column name="buy" valueNumeric="118.96"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="Nio Inc."/>
+            <column name="change" valueNumeric="11.05"/>
+            <column name="sell" valueNumeric="41.63"/>
+            <column name="buy" valueNumeric="41.67"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="4"/>
+            <column name="name" value="Amazon"/>
+            <column name="change" valueNumeric="275.22"/>
+            <column name="sell" valueNumeric="3308.74"/>
+            <column name="buy" valueNumeric="3314.98"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="5"/>
+            <column name="name" value="Airbus Group"/>
+            <column name="change" valueNumeric="7.22"/>
+            <column name="sell" valueNumeric="69.96"/>
+            <column name="buy" valueNumeric="70.12"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="6"/>
+            <column name="name" value="Nvidea Corporation"/>
+            <column name="change" valueNumeric="81.12"/>
+            <column name="sell" valueNumeric="582.12"/>
+            <column name="buy" valueNumeric="583.26"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="7"/>
+            <column name="name" value="Renault"/>
+            <column name="change" valueNumeric="1.395"/>
+            <column name="sell" valueNumeric="22.655"/>
+            <column name="buy" valueNumeric="22.715"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="8"/>
+            <column name="name" value="Microsoft"/>
+            <column name="change" valueNumeric="21.25"/>
+            <column name="sell" valueNumeric="223.67"/>
+            <column name="buy" valueNumeric="224.09"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="9"/>
+            <column name="name" value="Bitcoin"/>
+            <column name="change" valueNumeric="1687.4"/>
+            <column name="sell" valueNumeric="15541.96"/>
+            <column name="buy" valueNumeric="15655.6"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="10"/>
+            <column name="name" value="Ripple"/>
+            <column name="change" valueNumeric="0.01717"/>
+            <column name="sell" valueNumeric="1.18195"/>
+            <column name="buy" valueNumeric="1.1821"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="11"/>
+            <column name="name" value="Samsung"/>
+            <column name="change" valueNumeric="10.0"/>
+            <column name="sell" valueNumeric="110.5"/>
+            <column name="buy" valueNumeric="145.5"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="12"/>
+            <column name="name" value="Radio"/>
+            <column name="change" valueNumeric="456.65"/>
+            <column name="sell" valueNumeric="445.55"/>
+            <column name="buy" valueNumeric="450.95"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="13"/>
+            <column name="name" value="Euro"/>
+            <column name="change" valueNumeric="1.15"/>
+            <column name="sell" valueNumeric="1.005"/>
+            <column name="buy" valueNumeric="1.025"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="14"/>
+            <column name="name" value="Congo"/>
+            <column name="change" valueNumeric="100.0"/>
+            <column name="sell" valueNumeric="100.0"/>
+            <column name="buy" valueNumeric="10.0"/>
+        </insert>
+        <insert tableName="market">
+            <column name="id" valueNumeric="15"/>
+            <column name="name" value="France"/>
+            <column name="change" valueNumeric="100.0"/>
+            <column name="sell" valueNumeric="100.0"/>
+            <column name="buy" valueNumeric="100.0"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
